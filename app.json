@@ -1,8 +1,8 @@
 {
     "name": "Web:-scan/pair",
-    "description": "By Xcelsama",
+    "description": "By Xlicon-v2",
     "logo": "https://telegra.ph/file/f2fa9732e0e26bbb0bfb0.jpg",
-    "repository": "https://github.com/Xcelsama", 
+    "repository": "https://github.com/abrahamdw882", 
     "keywords": ["whatsappbot"],
     "success_url": "/", 
     "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
