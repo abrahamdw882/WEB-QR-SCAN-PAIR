@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Excel_Xcelsama,
+	default: v2_Xlicon,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function STAR_MD_QR_CODE() {
+	async function Qr_Code_By_Xlicon_V2() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Excel_Xcelsama = Excel_Xcelsama({
+			let Qr_Code_By_Xlicon_V2 = v2_Xlicon({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Maher_Zubair.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Maher_Zubair.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Xlicon_V2.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Xlicon_V2.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,19 +56,19 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Excel_Xcelsama.sendMessage(Qr_Code_By_Excel_Xcelsama.user.id, { text: 'STAR-MD;;;' + b64data });
+				   let session = await Qr_Code_By_Xlicon_V2.sendMessage(Qr_Code_By_Xlicon_V2, { text: 'STAR-MD;;;' + b64data });
 	
-				   let STAR_MD_TEXT = `
-*_Qr Code By Excel_*
+				   let XLICON_MD_TEXT = `
+*_Qr Code By XLICON-V2_*
 *_Made With HTML_*
 	
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Excel_Xcelsama.sendMessage(Qr_Code_By_Excel_Xcelsama.user.id,{text:STAR_MD_TEXT},{quoted:session})
+	 await Qr_Code_By_Xlicon_V2.sendMessage(Qr_Code_By_Xlicon_V2,{text:XLICON_MD_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Gifted_Tech.ws.close();
+					await Qr_Code_By_Abraham_Tech.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
