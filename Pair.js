@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Excel_Xcelsama,
+    default: v2_Xlicon,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
