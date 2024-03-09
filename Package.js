@@ -6,9 +6,9 @@
     "node" : ">=20.0.0"
     },
     "scripts": {
-    "start": "node Excel.js"
+    "start": "node Xlicon.js"
   },
-  "author": "Excel",
+  "author": "Xlicon-v2",
   "license": "GPL-3.0 license",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.5.0",
