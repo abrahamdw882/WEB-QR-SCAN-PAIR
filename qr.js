@@ -72,7 +72,7 @@ _Don't Forget To Give Star To My Repo_`
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					STAR_MD_QR_CODE();
+					XLICON_MD_QR_CODE();
 				}
 			});
 		} catch (err) {
@@ -85,6 +85,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await STAR_MD_QR_CODE()
+	return await XLICON_MD_QR_CODE()
 });
 module.exports = router
